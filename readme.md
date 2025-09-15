@@ -67,6 +67,4 @@ This project utilizes:
 - **Mockito** for mocking dependencies.
 - **Reactor Test** for testing reactive streams.
 
-## License
-
-This project is licensed under the MIT License.
+---
