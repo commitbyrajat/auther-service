@@ -1,0 +1,41 @@
+logging:
+  level:
+    org.springframework.r2dbc.core: DEBUG
+    io.r2dbc.h2: DEBUG
+
+---
+spring:
+  application:
+    name: r2dbc-demo
+
+---
+spring:
+  config:
+    activate:
+      on-profile: default
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/demo_db
+    username: demo_user
+    password: demo_password
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/demo_db
+    user: demo_user
+    password: demo_password
+
+---
+spring:
+  config:
+    activate:
+      on-profile: qa
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+    username: sa
+    password:
+  flyway:
+    enabled: false
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
