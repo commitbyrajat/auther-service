@@ -54,10 +54,10 @@ mvn -pl job spring-boot:run
 
 ## Testing
 
-To run the tests, execute:
+To execute unit and integration test, cd into rest module and execute:
 
 ```bash
-mvn test
+mvn -Dspring-boot.run.profiles=qa clean test
 ```
 
 ## License
