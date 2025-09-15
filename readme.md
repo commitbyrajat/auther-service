@@ -60,6 +60,13 @@ To execute unit and integration test, cd into rest module and execute:
 mvn -Dspring-boot.run.profiles=qa clean test
 ```
 
+### Testing Frameworks
+
+This project utilizes:
+- **JUnit 5** for unit testing.
+- **Mockito** for mocking dependencies.
+- **Reactor Test** for testing reactive streams.
+
 ## License
 
 This project is licensed under the MIT License.
